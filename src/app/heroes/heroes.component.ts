@@ -1,4 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
+import {HeroService} from '../service/hero.service';
+
 
 @Component({
     selector: 'app-heroes',
@@ -12,7 +14,8 @@ export class HeroesComponent implements OnInit {
     onRecvFunc(data) {
     }
 
-    constructor() {
+    constructor(private heroService: HeroService) {
+        console.log(heroService);
     }
 
     ngOnInit() {
