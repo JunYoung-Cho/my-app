@@ -1,5 +1,4 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {Hero} from '../interface/interface';
 
 @Component({
     selector: 'app-heroes',
@@ -8,17 +7,9 @@ import {Hero} from '../interface/interface';
 })
 
 export class HeroesComponent implements OnInit {
+    value = 'dsada';
 
-    // hero: Hero =
-    //     {
-    //         id: 1,
-    //         name: 'one',
-    //     };
-
-    @Input() hero: Hero;
-
-    info(info): void {
-        info.name = 'aaa';
+    onRecvFunc(data) {
     }
 
     constructor() {
