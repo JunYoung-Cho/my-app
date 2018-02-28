@@ -8,6 +8,7 @@ import {HeroesComponent} from './heroes/heroes.component';
 import {HeroesDetailsComponent} from './heroes-details/heroes-details.component';
 
 import {HeroService} from './service/hero.service';
+import { MassageService } from './service/massage.service';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import {HeroService} from './service/hero.service';
     ],
     providers: [
         HeroService,
+        MassageService,
     ],
     bootstrap: [AppComponent]
 })

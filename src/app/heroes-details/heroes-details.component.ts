@@ -1,4 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {HeroService} from '../service/hero.service';
+
 
 @Component({
     selector: 'app-heroes-details',

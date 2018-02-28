@@ -8,6 +8,7 @@ import {HeroService} from '../service/hero.service';
     styleUrls: ['./heroes.component.scss']
 })
 
+
 export class HeroesComponent implements OnInit {
     value = 'dsada';
 
@@ -15,10 +16,20 @@ export class HeroesComponent implements OnInit {
     }
 
     constructor(private heroService: HeroService) {
-        console.log(heroService);
+
+    }
+
+    getHeroes(): void {
+        // this.hero = this.heroService.getHeroes();
+        this.heroService.getHeroes()
+            .subscribe(hero => this.hero = hero);
+
+
     }
 
     ngOnInit() {
+        this.getHeroes();
     }
+
 
 }
