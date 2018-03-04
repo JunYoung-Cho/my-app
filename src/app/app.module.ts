@@ -9,6 +9,7 @@ import {HeroesDetailsComponent} from './heroes-details/heroes-details.component'
 
 import {HeroService} from './service/hero.service';
 import { MassageService } from './service/massage.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { MassageService } from './service/massage.service';
     ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        AppRoutingModule
     ],
     providers: [
         HeroService,

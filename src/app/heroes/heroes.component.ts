@@ -11,6 +11,7 @@ import {HeroService} from '../service/hero.service';
 
 export class HeroesComponent implements OnInit {
     value = 'dsada';
+    hero;
 
     onRecvFunc(data) {
     }

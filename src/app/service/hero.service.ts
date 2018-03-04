@@ -8,7 +8,6 @@ import {MassageService} from './massage.service';
 export class HeroService {
     getHeroes(): Observable<(number | string)> {
         this.massageService.add('bbb');
-        console.log(this.massageService)
         return of('2018-02-28' + 20180228);
     }
 
