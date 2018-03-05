@@ -10,6 +10,8 @@ import {HeroesDetailsComponent} from './heroes-details/heroes-details.component'
 import {HeroService} from './service/hero.service';
 import { MassageService } from './service/massage.service';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
     declarations: [
@@ -20,11 +22,13 @@ import { AppRoutingModule } from './app-routing.module';
     imports: [
         BrowserModule,
         FormsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientInMemoryWebApiModule
     ],
     providers: [
         HeroService,
         MassageService,
+        InMemoryDataService,
     ],
     bootstrap: [AppComponent]
 })
