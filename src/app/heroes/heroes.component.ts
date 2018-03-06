@@ -1,6 +1,10 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {HeroService} from '../service/hero.service';
 
+interface Hero {
+    id: number;
+    name: string;
+}
 
 @Component({
     selector: 'app-heroes',
@@ -8,13 +12,13 @@ import {HeroService} from '../service/hero.service';
     styleUrls: ['./heroes.component.scss']
 })
 
-
 export class HeroesComponent implements OnInit {
     value = 'dsada';
-    hero: (string | number);
+    hero: Hero[];
 
     onRecvFunc(data) {
     }
+
     constructor(private heroService: HeroService) {
 
     }

@@ -2,7 +2,7 @@ import {Injectable, OnInit} from '@angular/core';
 import {InMemoryDbService} from 'angular-in-memory-web-api';
 
 @Injectable()
-export class InMemoryDataService implements OnInit, InMemoryDbService {
+export class InMemoryDataService implements InMemoryDbService {
     createDb() {
         const heroes = [
             {id: 11, name: 'Mr. Nice'},
@@ -17,10 +17,6 @@ export class InMemoryDataService implements OnInit, InMemoryDbService {
             {id: 20, name: 'Tornado'}
         ];
         return {heroes};
-    }
-
-    ngOnInit() {
-        console.log(this);
     }
 }
 
