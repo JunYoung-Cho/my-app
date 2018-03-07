@@ -2,5 +2,10 @@
     {{value}}
 </app-heroes-details>
 
-{{hero}}
+<div *ngFor="let aa of hero">
+    <div>
+        <span>{{aa.id}}</span>
+        <span>{{aa.name}}</span>
+    </div>
+</div>
 
