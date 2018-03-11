@@ -6,9 +6,10 @@
   "scripts": {
     "electron": "ng build && electron .",
     "electron-aot": "ng build --prod && electron .",
+    "package": "asar pack ElectronPJ-win32-x64/resources/app ElectronPJ-win32-x64/resources/app.asar",
+    "build": "electron-packager . MoornmoApp && copy apple.jpg ElectronPJ-win32-x64/electron.icns",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -38,8 +39,10 @@
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
+    "asar": "^0.14.3",
     "codelyzer": "^4.0.1",
     "electron": "^1.8.3",
+    "electron-packager": "^11.1.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
