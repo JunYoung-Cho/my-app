@@ -6,8 +6,8 @@
   "scripts": {
     "electron": "ng build && electron .",
     "electron-aot": "ng build --prod && electron .",
-    "package": "asar pack ElectronPJ-win32-x64/resources/app ElectronPJ-win32-x64/resources/app.asar",
-    "build": "electron-packager . MoornmoApp && copy apple.jpg ElectronPJ-win32-x64/electron.icns",
+    "package": "asar pack MoornmoApp-win32-x64/resources/app MoornmoApp-win32-x64/resources/app.asar",
+    "build": "electron-packager . MoornmoApp && copy apple.jpg MoornmoApp-win32-x64/electron.icns",
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",

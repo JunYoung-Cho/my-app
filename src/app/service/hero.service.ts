@@ -13,7 +13,7 @@ interface Hero {
 
 @Injectable()
 export class HeroService {
-    private heroesUrl = 'api/heroes1';
+    private heroesUrl = 'api/heroes';
 
     private handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
@@ -26,6 +26,7 @@ export class HeroService {
     getHeroes(): Observable<Hero[]> {
         return this.http.get<Hero[]>(this.heroesUrl)
             .pipe(
+                tap((heroes) => console.log('fetched heroes')),
                 catchError(this.handleError('getHeroes', []))
             );
     }
