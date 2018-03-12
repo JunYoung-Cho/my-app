@@ -28,11 +28,19 @@ export class HeroesComponent implements OnInit {
         this.heroService.getHeroes()
             .subscribe(hero => this.hero = hero);
 
+    }
+
+    logArray(this: string[]): void {
+        for (const item of this) {
+            console.log(item);
+        }
 
     }
 
+
     ngOnInit() {
         this.getHeroes();
+        this.logArray.call(['aaa', 'bbbb']);
     }
 
 
